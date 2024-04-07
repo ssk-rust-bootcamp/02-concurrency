@@ -6,17 +6,17 @@ use std::{
 use anyhow::{anyhow, Result};
 
 #[derive(Debug, Clone)]
-pub struct Metrics {
+pub struct AmapMetrics {
     data: Arc<Mutex<HashMap<String, i64>>>,
 }
 
-impl Default for Metrics {
+impl Default for AmapMetrics {
     fn default() -> Self {
         Self::new()
     }
 }
 
-impl Metrics {
+impl AmapMetrics {
     pub fn new() -> Self {
         Self {
             data: Arc::new(Mutex::new(HashMap::new())),
